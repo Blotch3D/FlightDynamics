@@ -55,28 +55,4 @@ Whitespace in a line and blank lines are ignored.
 
 On any line, all text after a '#' character is a comment.
 
-Here is a (simplified) example file contents that might be used for a single-engine plane, with only one record shown:
-
-\#
-\# This is my example database!
-\#
-
-\# Input conditions 
-AircraftMass, PowerOut, Ailerons, Flaps, Elevator, Rudder, AirspeedX, AirspeedY, AirspeedZ, Density
-
-\# Output forces and torques.
-\# In this simplistic example we only want overall force on the airframe rather
-\# than force, torque, and surface temperature for individual parts
-ForceX, ForceY, ForceZ
-
-\# RBF parameters (Radius, NLayers, LambdaReg)
-1, 3, 0
-
-\#
-\# Database records follow:
-\#
-
-\# This is one record. You'll need a lot more records.
-.5, 0, 0, -1, 0, 0, 0, .5, 0, 0,       0, -.2, -.2
-\#\\______________________________/       \\________/
-\#            inputs                      outputs
+See database.txt for an example.
