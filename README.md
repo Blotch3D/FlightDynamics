@@ -24,7 +24,7 @@ The bottom line is that interpolation requires a lot of well chosen initial case
 
 Look at it this way: If in the past you've been taking man-weeks to tweak equations to produce a fast but imperfect calculation of forces on the fly, how is that better than simply letting a computer pre-calculate several thousand good CFDs for a few weeks, and then getting both fast and accurate results from then on?
 
-Interpolation of non-regular data points in higher dimensions can be done with a radial basis function (RBF) interpolation. And that's what FlightDynamics does (by using the alglib math library). See https://en.wikipedia.org/wiki/Radial_basis_function_interpolation for more information.
+Interpolation of non-regular data points in higher dimensions can be done with a radial basis function (RBF) interpolation. And that's what FlightDynamics does (by using the alglib math library). See https://en.wikipedia.org/wiki/Radial_basis_function_interpolation and https://www.alglib.net/interpolation/fastrbf.php for more information.
 
 Using FlightDynamics:
 
