@@ -47,9 +47,9 @@ The first line of the file is a list of input condition names separated with com
 
 The second line is a list of output force names separated with commas in the order they will be used. FlightDynamics uses the number to define the number of outputs, but cares nothing about the names.
 
-The third line is a couple of RBF parameters separated by a comma: The Radius and NLayers. until you understand these well, just use zero for both, which indicates use a default.
+The third line is a three comma-separated RBF parameters: The Radius, NLayers, and LambdaReg. Until you understand these well, just use 1, 3, 0.
 
-Database records start on the fourth line, one record per line. Records need not be in any order. A record is simply the input values followed by output values.
+Database records start on the fourth line, one record per line. Records need not be in any order. A record is simply the input values followed by output values, all comma-separated.
 
 Whitespace in a line and blank lines are ignored.
 
