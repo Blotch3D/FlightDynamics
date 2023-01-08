@@ -18,7 +18,7 @@ Still, the number of pre-defined cases is substantial to produce fairly good acc
 
 Each input condition can be thought of as a dimension in a space within which we do our interpolation. We want to intelligently pick in that space the positions to pre-calculate, rather than simply calculating them for each position in a regular grid. Specifically, for a given region in that space if any output is experiencing a notably higher order relationship (that is, the function of that input to any output is high order and magnitude), then cases should be dense in that area through that dimension. Likewise cases can be sparse where no output experiences a notably higher order relationship in any dimension. Obviously, since thousands of CFD models will need to be created, this decision-making process should be automated.
 
-Further optimization can be had by accounting for airframe symmetry, choosing the airframe parts wisely, performing a hybrid process of mixing RBF interpolation with estimator equations, etc.
+Further optimization can be had by accounting for airframe symmetry, choosing the airframe parts wisely, performing a hybrid process of mixing interpolation with estimator equations, etc.
 
 The bottom line is that interpolation requires a lot of well chosen initial cases (many thousands, possibly taking weeks to create), but then quickly produces high accuracy results.
 
@@ -37,7 +37,7 @@ FlightDynamics -db:MyDbFile.txt
 FlightDynamics takes a while to compile that database. Then, each time you enter (via stdin) a line of comma-separated input conditions in the same order they appear in a database records, FlightDynamics will return a line of the output values in the same order as the outputs used by the database records.
 
 A new input line is just each input value separated by a comma like this, for example:
-.215, -.101, 0.026, -.593, 0, .2, 0, .5, 0, 0
+.215, .101, 0.026, .593, 0, .2, 0, .5, 0, 0
 
 So, you can automate the interaction with FlightDynamics by programmatically sending and receiving lines through stdin and stout. (Although the programmatic interface is just as easy and quicker if you know a little C#)
 
@@ -47,7 +47,7 @@ The first line of the file is a list of input condition names separated with com
 
 The second line is a list of output force names separated with commas in the order they will be used. FlightDynamics uses the number to define the number of outputs, but cares nothing about the names.
 
-The third line is a three comma-separated RBF parameters: The Radius, NLayers, and LambdaReg. Until you understand these well, just use 1, 3, 0. See the alglib link, above,for details.
+The third line is a three comma-separated RBF parameters: The Radius, NLayers, and LambdaReg. Until you understand these well, just use 1, 3, 0. See the alglib link, above, for details.
 
 Database records start on the fourth line, one record per line. Records need not be in any order. A record is simply the input values followed by output values, all comma-separated.
 
