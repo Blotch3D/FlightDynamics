@@ -8,9 +8,9 @@ The input conditions would be things like the power plant outputs, the control s
 
 This is a complex problem and typically done with CFD and/or by gathering empirical data.
 
-But let's also say we want to accurately calculate the outputs given ANY set of input conditions in near real-time, or at least notably faster than a CFD.
+But let's also say we want to accurately calculate the outputs given ANY set of input conditions in near real-time, or at least notably faster than a CFD. For example, the way a flight simulator requires it.
 
-To simplify the problem, we'll also say it is OK to ignore or separately handle discontinuous effects like hysteresis between turbulent and laminar flow over smooth surfaces. We can also make sure we choose input conditions and output parameters such that their relationships are all continuous, so that a mathematical solution is at least possible.
+To simplify the problem, we'll also say it is OK to ignore or separately handle discontinuous effects like hysteresis between turbulent and laminar flow over smooth surfaces, oscillations in turbulence patterns, oscillation in non-rigid airframe parts (that is faster than the solving algorithm), etc. We can also make sure we choose input conditions and output parameters such that their relationships are all continuous, so that a mathematical solution is at least possible.
 
 If we do these things, then the best way to quickly and accurately calculate forces from any input conditions is to keep a limited database of known cases previously gathered empirically or from CFD models, and then interpolate/extrapolate the new cases as they appear. That way we will have both high accuracy and fast results (assuming the pre-defined cases are numerous enough and/or well chosen).
 
