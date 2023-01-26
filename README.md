@@ -4,7 +4,7 @@ FlightDynamics
 
 Let's say we want to know, as accurately as possible, the various forces, torques, surface temperatures, etc. on an aircraft under a given set of conditions.
 
-The input conditions would be things like the power plant outputs, the control surface positions, propeller pitches, landing gear position, relative air velocity on each airframe part, air density, ambient and current surface temperatures, etc. The outputs would be the force, torque, and surface temperatures on parts of the airframe or on the whole airframe.
+The input conditions would be things like the power plant outputs, the control surface positions, propeller pitches, landing gear position, relative air velocity, air density, ambient and current surface temperatures, etc. The outputs would be the force, torque, and surface temperatures on parts of the airframe or on the whole airframe.
 
 This is a complex problem and typically done with CFD and/or by gathering empirical data.
 
